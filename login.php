@@ -1,6 +1,7 @@
 <?php
 session_start();
-include('db_config.php');
+// Use require_once to prevent the "Cannot redeclare" error
+require_once('db_config.php'); 
 
 $error = "";
 
@@ -21,10 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $row['username'];
             $_SESSION['role'] = $row['role'];
 
+            // LOG THE ACTIVITY HERE (Inside the success block)
+            logActivity($conn, $_SESSION['username'], "User logged into the system", "AUTH");
+
             header("Location: portal.php");
             exit();
         } else {
             $error = "Invalid password!";
+            // OPTIONAL: Log failed attempts too
+            // logActivity($conn, $user, "Failed login attempt (Wrong Password)", "AUTH");
         }
     } else {
         $error = "User not found!";
