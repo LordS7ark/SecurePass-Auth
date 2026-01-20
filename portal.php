@@ -37,6 +37,11 @@ if (!isset($_SESSION['user_id'])) {
             <h3>Laundry Master</h3>
             <p style="font-size: 0.8rem; color: #888;">Track laundry orders, status, and customer billing.</p>
         </a>
+
+        <a href="../inventory/index.php" class="app-card">
+    <span class="icon">📦</span>
+    <h3>Inventory System</h3>
+</a>
     </div>
 
     <a href="logout.php" class="btn-logout">Sign Out</a>
