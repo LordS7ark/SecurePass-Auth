@@ -48,6 +48,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         input { width: 100%; padding: 12px; margin: 10px 0; background: #0f111a; border: 1px solid #2d3142; color: white; border-radius: 5px; }
         button { width: 100%; padding: 12px; background: #a855f7; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
         .error { color: #ff4d4d; font-size: 14px; }
+        .login-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+input {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: 2px solid #00d4ff; /* Neon underline */
+    color: white;
+    padding: 10px;
+}
     </style>
 </head>
 <body>
